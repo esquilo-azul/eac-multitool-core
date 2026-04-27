@@ -1,5 +1,8 @@
 {
   "name": "eac-multitool",
   "version": "0.0.0",
-  "description": "TODO"
+  "description": "TODO",
+  "scripts": [
+    "bin/eac-multitool-core.sh"
+  ]
 }
