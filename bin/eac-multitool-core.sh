@@ -28,11 +28,11 @@ export -f eac_multitool_core
 source "${EACMULTITOOLCORE_ROOT}/sub/eac-bash-lib/init.sh"
 
 pathvar_assert 'MULTITOOL_PATH'
-pathvar_assert 'PPATH'
+pathvar_assert 'PROGRAMEIRO_PATH'
 pathvar_assert 'TASKEIRO_PATH'
 
 while read -r MULTITOOL_NODE; do
-  add_to_pathvar "$MULTITOOL_NODE" 'PPATH' 'program'
+  add_to_pathvar "$MULTITOOL_NODE" 'PROGRAMEIRO_PATH' 'program'
   add_to_pathvar "$MULTITOOL_NODE" 'TASKEIRO_PATH' 'task'
 done < <(pathvar_to_lines 'MULTITOOL_PATH')
 
