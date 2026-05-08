@@ -16,4 +16,4 @@ done
 
 export PROGRAMEIRO_ROOT="$(readlink -f $(dirname "$PRG"))"
 source "$PROGRAMEIRO_ROOT/lib.sh"
-p_run "$@"
+programeiro_run "$@"

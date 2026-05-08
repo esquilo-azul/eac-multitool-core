@@ -66,7 +66,7 @@ function _p_find_program_in_path {
   return $PROGRAMEIRO_NOT_FOUND_ERROR
 }
 
-function p_run {
+function programeiro_run {
   set +u
   local prgname=$1
   shift
@@ -100,7 +100,7 @@ function p_run {
   fi
   PPWD="$(dirname "$prgname")" "$prgpath" "$@"
 }
-export -f p_run
+export -f programeiro_run
 
 function _p_run_path() {
   local prgname="$1"
