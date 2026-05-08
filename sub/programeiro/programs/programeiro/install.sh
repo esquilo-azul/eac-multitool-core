@@ -13,9 +13,9 @@ mkdir -p "`dirname "$RC_FILE"`"
 
 cat <<EOF > "$RC_FILE"
 export PROGRAMEIRO_PATH=$1
-alias programeiro="$PROOT/run.sh"
-export PROOT="$PROOT"
-source "$PROOT/completion.sh"
+alias programeiro="$PROGRAMEIRO_ROOT/run.sh"
+export PROGRAMEIRO_ROOT="$PROGRAMEIRO_ROOT"
+source "$PROGRAMEIRO_ROOT/completion.sh"
 EOF
 
 LINE=". '$RC_FILE'"

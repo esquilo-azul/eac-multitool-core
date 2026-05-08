@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "$PROOT/lib.sh"
+source "$PROGRAMEIRO_ROOT/lib.sh"
 TERM=''
 if [ $# -gt 0 ]; then
   TERM=$1

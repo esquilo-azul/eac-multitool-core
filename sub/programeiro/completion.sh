@@ -6,7 +6,7 @@ while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symli
   SOURCE="$(readlink "$SOURCE")"
   [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
 done
-export PROOT="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
+export PROGRAMEIRO_ROOT="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
 
 if [[ -z $PROGRAMEIRO_ALIAS ]]; then
   PROGRAMEIRO_ALIAS="programeiro"
@@ -29,5 +29,5 @@ _p_completion() {
   return 0
 }
 
-eval "${FUNCTION_NAME}() { source '$PROOT/lib.sh'; set +u; set +e; _p_completion; return 0; }"
+eval "${FUNCTION_NAME}() { source '$PROGRAMEIRO_ROOT/lib.sh'; set +u; set +e; _p_completion; return 0; }"
 complete -F "$FUNCTION_NAME" -o nospace "$PROGRAMEIRO_ALIAS"

@@ -32,7 +32,7 @@ function p_paths {
     readlink -f "$path"
   done
   IFS=$OIFS
-  echo "$PROOT/programs"
+  echo "$PROGRAMEIRO_ROOT/programs"
 }
 
 function p_find_program {

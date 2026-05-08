@@ -3,5 +3,5 @@
 set -u
 set -e
 
-source "$PROOT/lib.sh"
+source "$PROGRAMEIRO_ROOT/lib.sh"
 p_paths
