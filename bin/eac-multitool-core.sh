@@ -21,11 +21,12 @@ function add_to_pathvar() {
 }
 
 function eac_multitool_core() {
-  "${EACMULTITOOLCORE_ROOT}/sub/programeiro/run.sh" "$@"
+  programeiro_run "$@"
 }
 export -f eac_multitool_core
 
 source "${EACMULTITOOLCORE_ROOT}/sub/eac-bash-lib/init.sh"
+source "${EACMULTITOOLCORE_ROOT}/sub/programeiro/bin/programeiro.sh"
 
 pathvar_assert 'MULTITOOL_PATH'
 pathvar_assert 'PROGRAMEIRO_PATH'
