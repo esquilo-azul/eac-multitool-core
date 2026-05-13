@@ -29,6 +29,8 @@ source "${EACMULTITOOLCORE_ROOT}/sub/eac-bash-lib/init.sh"
 source "${EACMULTITOOLCORE_ROOT}/sub/programeiro/bin/programeiro.sh"
 
 pathvar_assert 'MULTITOOL_PATH'
+pathvar_push 'MULTITOOL_PATH' "${EACMULTITOOLCORE_ROOT}"
+
 pathvar_assert 'PROGRAMEIRO_PATH'
 pathvar_assert 'TASKEIRO_PATH'
 
