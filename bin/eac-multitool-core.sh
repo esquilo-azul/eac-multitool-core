@@ -33,6 +33,10 @@ pathvar_assert 'PROGRAMEIRO_PATH'
 pathvar_assert 'TASKEIRO_PATH'
 
 while read -r MULTITOOL_NODE; do
+  SETUP_FILE="${MULTITOOL_NODE}/setup.sh"
+  if [[ -f "$SETUP_FILE" ]]; then
+    source "${SETUP_FILE}"
+  fi
   add_to_pathvar "$MULTITOOL_NODE" 'PROGRAMEIRO_PATH' 'program'
   add_to_pathvar "$MULTITOOL_NODE" 'TASKEIRO_PATH' 'task'
 done < <(pathvar_to_lines 'MULTITOOL_PATH')
