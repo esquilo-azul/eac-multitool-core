@@ -1,5 +1,3 @@
-#!/bin/bash
-
 export PROGRAMEIRO_NOT_FOUND_ERROR=6
 
 function p_path_expand() {
