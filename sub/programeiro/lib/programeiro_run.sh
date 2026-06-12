@@ -30,6 +30,6 @@ function programeiro_run {
     >&2 echo "\"$prgname\" not found"
     exit 1
   fi
-  PPWD="$(dirname "$prgname")" "$prgpath" "$@"
+  PPWD="$(dirname "$prgname")" programeiro_run_file "$prgpath" "$@"
 }
 export -f programeiro_run
