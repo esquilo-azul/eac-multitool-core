@@ -4,4 +4,4 @@ set -u
 set -e
 
 source "$PROGRAMEIRO_ROOT/lib.sh"
-p_paths
+programeiro_paths

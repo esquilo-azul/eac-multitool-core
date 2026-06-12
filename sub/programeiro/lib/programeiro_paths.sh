@@ -1,4 +1,4 @@
-function p_paths {
+function programeiro_paths {
   set +u
   local paths=$PROGRAMEIRO_PATH
   set -u

@@ -12,7 +12,7 @@ for file in "${PROGRAMEIRO_ROOT_ROOT}/lib/"*.sh; do
   source "$file"
 done
 
-p_paths | while read path; do
+programeiro_paths | while read path; do
   if [ ! -d "$path" ]; then
     >&2 echo "\"$path\" in \$PROGRAMEIRO_PATH is not a directory"
     exit 2
