@@ -1,4 +1,7 @@
 {
   "name": "programeiro",
-  "version": "0.6.0"
+  "version": "0.6.0",
+  "dependencies": {
+    "esquilo-azul/eac-bash-lib": "0.38.0"
+  }
 }
