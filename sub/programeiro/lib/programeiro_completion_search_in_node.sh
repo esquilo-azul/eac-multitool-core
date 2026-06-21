@@ -1,4 +1,4 @@
-function p_completion_search_dir() {
+function programeiro_completion_search_in_node() {
   local root_dir=$1
   local subdir=$2
   local subpath=$(echo $3 | sed 's|^/\+||g' | sed 's|/\+$||g')
@@ -13,7 +13,7 @@ function p_completion_search_dir() {
     if [ -z "$subpath_left" ]; then
       if [ -d "$line" ]; then
         if [ "$ends_with_slash" == 'true' ] && [ -n "$subpath" ]; then
-          p_completion_search_dir "$root_dir" "$subdir/$item" '' "$ends_with_slash"
+          programeiro_completion_search_in_node "$root_dir" "$subdir/$item" '' "$ends_with_slash"
         else
           echo "$subdir/$item/"
         fi
@@ -21,7 +21,7 @@ function p_completion_search_dir() {
         echo "$subdir/${item%.*}"
       fi
     elif [ -d "$line" ]; then
-      p_completion_search_dir "$root_dir" "$subdir/$item" "$subpath_left" "$ends_with_slash"
+      programeiro_completion_search_in_node "$root_dir" "$subdir/$item" "$subpath_left" "$ends_with_slash"
     fi
   done
 }
