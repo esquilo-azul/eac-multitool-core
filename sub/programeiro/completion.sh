@@ -19,7 +19,7 @@ _p_completion() {
   cur=${COMP_WORDS[COMP_CWORD]}
   case "$COMP_CWORD" in
     1)
-    COMPREPLY=( $( p_completion_search $cur ) )
+    COMPREPLY=( $( programeiro_completion_search $cur ) )
     ;;
 
     *)
